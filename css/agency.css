@@ -1,6 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: rgb(247, 247, 249);
 }
 
 p {
@@ -52,7 +53,7 @@ section h3.section-subheading {
 section h3.section-subheading2 {
   font-size: 16px;
   font-weight: 400;
-  margin-left: 0px
+  margin-left: 0px;
   margin-bottom: 75px;
   text-transform: none;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;/*'Vollkorn', sans-serif;*/
@@ -99,6 +100,10 @@ section h3.section-subheading2 {
   color: white;
 }
 
+.right-aligned-object {
+  text-align: right;
+}
+
 
 img::selection {
   background: transparent;
@@ -119,7 +124,7 @@ img::-moz-selection {
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: rgb(55,52,53);
+  background-color: rgba(55, 52, 53, 0);
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -142,7 +147,8 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ed323e;
+  color: #0a72bc;
+  font-weight: bold;
 }
 
 @media (min-width: 992px) {
@@ -177,37 +183,51 @@ img::-moz-selection {
 }
 
 header.masthead {
-  text-align: center;
-  color: white;
-  background-image: url("../images/web_teaser.png");
+  color: rgb(172, 171, 171);
   background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  /* background: radial-gradient(circle, rgb(183, 220, 243), rgb(138, 168, 192));  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header.masthead .intro-text {
   padding-top: 150px;
   padding-bottom: 100px;
+  width: 100%;
 }
 
 header.masthead .intro-text .intro-lead-in {
   font-size: 22px;
-  //font-style: italic;
   line-height: 22px;
   margin-bottom: 25px;
+  color: rgb(120, 120, 120);
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 header.masthead .intro-text .intro-heading {
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 50px;
+  font-size: 10px;
+  line-height: 10px;
   margin-bottom: 25px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header.masthead .intro-image {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header.masthead .intro-image img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -217,7 +237,6 @@ header.masthead .intro-text .intro-heading {
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
-    //font-style: italic;
     line-height: 40px;
     margin-bottom: 25px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -299,7 +318,7 @@ header.masthead .intro-text .intro-heading {
 
 #portfolio .portfolio-item .portfolio-caption p {
   font-size: 16px;
-  //font-style: italic;
+  /* font-style: italic; */
   margin: 0;
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

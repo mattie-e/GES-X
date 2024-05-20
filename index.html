@@ -7,50 +7,37 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>LU-AVS</title>
+    <title>GES-X</title>
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
-	<link rel="icon" href="./images/icon_logo.png" type="image/x-icon">
+	<link rel="icon" href="./images/GES-X_logo.PNG" type="image/x-icon">
 
     <!-- Custom styles for this template -->
     <link href="./css/agency.css" rel="stylesheet">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41410283-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-41410283-2');
-    </script>
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav", style = "background-color: #373435">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav", style = "background-color: rgba(159, 193, 213, 0.779)">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img style="width:8em;" src="./images/LU-AVS-logo-white.png" alt="Logo"></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img style="width:8em;" src="./images/GES-X_logo_white.png" alt="Logo"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item" style="font-size: 110%">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="#dataset">Dataset</a>
             </li>
             <li class="nav-item" style="font-size: 110%">
-              <a class="nav-link js-scroll-trigger" href="#stats">Dataset</a>
+              <a class="nav-link js-scroll-trigger" href="#model">Model</a>
             </li>
-			<li class="nav-item" style="font-size: 110%">
+			      <li class="nav-item" style="font-size: 110%">
               <a class="nav-link js-scroll-trigger" href="#baselines">Baselines</a>
             </li>
-            <li class="nav-item" style="font-size: 110%">
-              <a class="nav-link js-scroll-trigger" href="#downloads">Downloads</a>
-			</li>
 
           </ul>
         </div>
@@ -61,102 +48,28 @@
     <!-- Header -->
     <header class="masthead">
       <div class="container">
-        <div class="intro-text">
-
-            <div class="row">
-              <div class="col-lg-12">
-                <h2 class="section-heading text-uppercase" style="text-align:center;">Benchmarking Audio Visual Segmentation for Long-Untrimmed Videos</h2>
-                <h3 class="section-heading text-uppercase" style="text-align:center; color:#20c997">[Submitted to CVPR 2024]<h3>
-    
-                <p class="text-muted" style="text-align:center; color:#00F">
-                  <h5> 
-                  <a href="#" style="color:#ffc107">[Paper ID: 17299]</a>
-                 </h5>
-                 </p>
+            <div class="row justify-content-center align-items-center intro-text">
+              <div class="w-25">
+                  <div class="intro-lead-in">GES-X: a Large-scale 3D Co-speech Gesture Dataset</div>
+                  <p>GES-X is originally collected from about 4.3K talk show videos including different stances (i.e., standing or 
+                    sitting). After data processing, our GES-X dataset contains more than 40M gesture frames. To the
+                    best of our knowledge, this is the largest whole-body meshed 3D co-speech gesture dataset, which is
+                    longer than 15 times the size of the next BEAT2.</p >
               </div>
-            </div>
+              <div class="w-75">
+                <img style="width: 100%" src="./images/pie.png" alt="">
+              </div>
         </div>
       </div>
     </header>
 
-<!-- About -->
-<section class="bg-light" id="about">
+<!-- Dataset -->
+<section class="bg-transparent" id="dataset">
   <div class="container">
-
-    <br/>
-
-    
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="section-heading text-uppercase">Why Long-Untrimmed Audio-visual Segmentation Dataset?</h3>
-         <p  class="text-muted">
-		<b>Existing audio-visual segmentation (AVS) datasets typically focus on short-trimmed videos with only one pixel-map annotation for a per-second video clip.</b> 
-		In contrast, for untrimmed videos, the sound duration, start- and end-sounding time positions, and visual deformation of audible objects vary significantly. 
-		Therefore, <b> we observed that current AVS models trained on trimmed videos might struggle to segment sounding objects in long videos. </b>
-		<b> To investigate the feasibility of grounding audible objects in videos along both temporal and spatial dimensions,</b> 
-		we introduce the <b>L</b>ong-<b>U</b>ntrimmed <b>A</b>udio-<b>V</b>isual <b>S</b>egmentation dataset <b>(LU-AVS)</b>, 
-		which includes precise frame-level annotations of sounding emission times and provides exhaustive mask annotations for all frames.
-          </p><center><img src="./images/teasev2.png" alt="" style="width:99%;  margin-top:8px; margin-bottom:15px;"></center>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <!-- <ul> -->
-          <p class="text-muted">
-			Samples of our from <b>L</b>ong-<b>U</b>ntrimmed <b>A</b>udio-<b>V</b>isual <b>S</b>egmentation dataset.  
-			Different from previous AVS datasets, <b>LU-AVS is specifically crafted to explore the challenges inherent in the AVS task for long-untrimmed videos. </b>
-			<b><span style="color:#ff6600">It features detailed start- and end-sounding positions in the temporal dimension, 
-			along with comprehensive mask and bounding box annotations in the spatial dimension.</span></b>
-			The examples show that our dataset contains numerous audible segments in each video, 
-			characterized by diverse durations and varying start and end-sounding positions. 
-			Additionally, <b>within a single video, the same objects may have notable shifts spatially and undergo deformation.</b>
-          </p>
-      </div>
-    </div>
-
-    <br/>
-
-
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="section-heading text-uppercase">What is the audio-visual segmentation task?</h3>
-
-            <p class="text-muted">
-              <b>Task Definition.</b> Audio-visual segmentation aims to localize audible objects by a pixel-level map for a given audio-visual pair.
-            </p>
-            <p class="text-muted">
-              <b>Challenges in Long-Untrimmed Videos.</b> (1) The start and sounding frames of audible object are uncertain. </br>
-			  (2) The sounding duration of the target objects varies significantly among different videos.
-            </p>
-        </h5>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-12">
-        <h3 class="section-heading text-uppercase">What is LU-AVS dataset?</h3>
-        <!-- <h5 class="text-muted" style="text-align:left;"> -->
-          <!-- <ul> -->
-            <p class="text-muted">
-			  To investigate the AVS task on long-untrimmed videos, we propose a large-scale Long-Untrimmed Audio-Visual Segmentation (LU-AVS) dataset. 
-              LU-AVS dataset comprises 6.1K untrimmed videos covering 78 categories, and 62K pixel-level annotation masks are provided to indicate the audible objects.
-              Moreover,  we extend our dataset with bounding box annotations, extending them to both previously mask-marked categories and those challenging to annotate with masks. 
-			  The extended LU-AVS dataset contains about 7.2K untrimmed videos and more than 88 categories.
-			  More details the LU-AVS dataset are shown below.
-            </p>
-
-
-          <!-- </ul> -->
-        </h5>
-      </div>
-    </div>
-
-
 
     <div class="row">
       <!-- news column -->
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h4 class="service-heading">Basic informations</h4>
         <ul class="text-muted">
           <li class="text-muted">Videos are collected from YouTube.</li>
@@ -166,7 +79,7 @@
         </ul>
       </div>
       <!-- characteristics column -->
-      <div class="col-md-4">
+      <div class="col-md-6">
         <h4 class="service-heading">Characteristics</h4>
         <ul class="text-muted">
           <li class="text-muted">Total duration of videos is <b>84.9 hours </b>, sounding duration is 74.6 hours.</li>
@@ -177,19 +90,10 @@
         </ul>
       </div>
 
-      <!-- udated column -->
-      <div class="col-md-4">
-        <h4 class="service-heading">Personal data/Human subjects</h4>
-          <p class="text-muted">Videos in LU-AVS are public on YouTube, and annotated via professional annotators. 
-		  The details about the annotation way is explained in our paper. 
-		  Our dataset does not contain personally identifiable information or offensive content.</p>
-      </div>
-      </div>
-
     <!-- video banner row -->
         <div class="row justify-content-md-center text-center">
       <div class="col-md-12" style="text-align:left">
-        <h4 class="section-subheading" style="text-align:left; margin-left:-14px">Video examples</h4>
+        <h4 class="section-subheading" style="text-align:left; margin-left:-14px">Examples</h4>
       </div>
       <hr/>
       <p class="text-muted" style="text-align:left">
@@ -197,124 +101,64 @@
       </p>
       <p class="text-muted" style="text-align:left; margin-right: 10px;">
 	   <div class="col-md-12" style="text-align:left">
-	    <!--<table>
-          <tr>
-            <td style="width:30%">
-              <iframe width="368" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-          <td style="width: 70%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
-                  <b> The information of the audible segments:</b><br>
-				  (1) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 68; end frame 482<br>
-                  (2) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 651; end frame 783<br>
-                  (3) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 938; end frame 998<br>
-			      (4) Playing acoustic guitar:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 631<br>
-				  (5) Playing acoustic guitar:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 769; end frame 1079<br>
-                </font>                
-              </div>                      
-            </td>
-			
-			</tr>
-		<tr>
-            <td style="width: 60%">
-              <iframe width="368" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-            <td style="width: 100%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
-                  <b> The information of the audible segments:</b><br>
-				  (1) Car passing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 177; end frame 621<br>
-                  (2) Skidding:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 110<br>
-                </font> 
-              </div>
-            </td>
-		</tr>
-		<tr>
-            <td style="width: 60%">
-              <iframe width="368" height="207" src="./videos/0EUIJsiKAx0.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-            <td style="width: 100%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
-                  <b> The information of the audible segments:</b><br>
-				  (1) Airplane flyby:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 935<br>
-                </font> 
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div style="height: 20px;"></div>
-            </td>
-          </tr>
-
-        </table>-->
-	<>
        <table>
           <tr>
             <td style="width:3%"></td>
-            <td style="width:30%">
-              <iframe width="368" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <td style="width:50%">
+              <iframe width="614" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </td>
 
             <td style="width:1%"></td>
-            <td style="width: 30%">
-              <iframe width="368" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-
-            <td style="width:1%"></td>
-            <td style="width: 30%">
-              <iframe width="368" height="207" src="./videos/0EUIJsiKAx0.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <td style="width: 50%">
+              <iframe width="614" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </td>
 
           </tr>
           <tr>
             <td style="width:1%"></td>
-            <td style="width: 30%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
+            <td style="width: 50%">
+              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;">
+                <font color="#4682B4">
                   <b> The information of the audible segments:</b><br>
-				  (1) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 68; end frame 482<br>
-                  (2) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 651; end frame 783<br>
-                  (3) Female singing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 938; end frame 998<br>
-			      (4) Playing acoustic guitar:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 631<br>
-				  (5) Playing acoustic guitar:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 769; end frame 1079<br>
                 </font>                
               </div>                      
             </td>
             <td style="width:1%"></td>
-            <td style="width: 30%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
+            <td style="width: 50%">
+              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;">
+                <font color="#4682B4">
                   <b> The information of the audible segments:</b><br>
-				  (1) Car passing:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 177; end frame 621<br>
-                  (2) Skidding:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 110<br>
                 </font> 
               </div>
             </td>
+          </tr>
+          <tr>
+            <td style="width:3%"></td>
+            <td style="width:50%">
+              <iframe width="614" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+
             <td style="width:1%"></td>
-            <td style="width: 30%">
-              <div style="height: 200px; text-align:left; border: solid 0.5px #DBDCDB; overflow-x:auto ;overflow-y: auto;">
-                <font color="#148F77">
+            <td style="width: 50%">
+              <iframe width="614" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </td>
+
+          </tr>
+          <tr>
+            <td style="width:1%"></td>
+            <td style="width: 50%">
+              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;">
+                <font color="#4682B4">
                   <b> The information of the audible segments:</b><br>
-				  (1) Airplane flyby:</br>  &nbsp;&nbsp;&nbsp;&nbsp;  
-					start frame 0; end frame 935<br>
+				  (1) Female singing:</br>
+                </font>                
+              </div>                      
+            </td>
+            <td style="width:1%"></td>
+            <td style="width: 50%">
+              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;">
+                <font color="#4682B4">
+                  <b> The information of the audible segments:</b><br>
                 </font> 
               </div>
             </td>
@@ -341,8 +185,8 @@
     </div>
 </section>
 
-<!-- Stats -->
-<section id="stats">
+<!-- Model -->
+<section id="model">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -557,7 +401,7 @@
 	</div>
 	</br></br>
 
-<section class="bg-light" id="downloads">
+<section class="bg-transparent" id="downloads">
   <div class="container">
     
     <div class="row">
