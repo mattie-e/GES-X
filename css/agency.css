@@ -197,17 +197,22 @@ header.masthead {
 }
 
 header.masthead .intro-text {
-  padding-top: 150px;
-  padding-bottom: 100px;
+  padding-top: 200px;
+  padding-bottom: 10px;
   width: 100%;
+  text-align: left;
+  float: left;
 }
 
 header.masthead .intro-text .intro-lead-in {
-  font-size: 22px;
-  line-height: 22px;
-  margin-bottom: 25px;
-  color: rgb(120, 120, 120);
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  color: rgb(137, 136, 136);
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: left;
+  float: left;
 }
 
 header.masthead .intro-text .intro-heading {
@@ -215,6 +220,8 @@ header.masthead .intro-text .intro-heading {
   line-height: 10px;
   margin-bottom: 25px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-align: left;
+  float: left;
 }
 
 header.masthead .intro-image {
@@ -222,6 +229,7 @@ header.masthead .intro-image {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  float: right;
 }
 
 header.masthead .intro-image img {
@@ -231,11 +239,19 @@ header.masthead .intro-image img {
 }
 
 @media (min-width: 768px) {
+  header.masthead {
+    background-image: url('./images/pie.png');
+    background-position: center;
+  }
   header.masthead .intro-text {
+    background-image: url('./images/pie.png');
     padding-top: 200px;
-    padding-bottom: 110px;
+    padding-bottom: 10px;
+    width: 100%;
+    text-align: left;
   }
   header.masthead .intro-text .intro-lead-in {
+    float: left;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
@@ -247,6 +263,9 @@ header.masthead .intro-image img {
     line-height: 75px;
     margin-bottom: 50px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  header.masthead .w-20, header.masthead .w-80 {
+    width: 100%; 
   }
 }
 
