@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>GES-X</title>
+    <title>CoCoGesture</title>
 
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Kaushan+Script|Droid+Serif:400,700,400italic,700italic|Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css">
@@ -17,13 +17,16 @@
 
     <!-- Custom styles for this template -->
     <link href="./css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav", style = "background-color: rgba(159, 193, 213, 0.779)">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img style="width:8em;" src="./images/GES-X_logo_white.PNG" alt="Logo"></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img style="width:10em;" src="./images/CoCoG_logo.PNG" alt="Logo"><p style="width:8em; font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 15px; font-style: italic; color: white; margin-top:-27px; margin-left:3px">Toward Coherent Co-speech 3D
+          Gesture Generation in the Wild</p></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
         </button>
@@ -35,8 +38,14 @@
             <li class="nav-item" style="font-size: 110%">
               <a class="nav-link js-scroll-trigger" href="#model">Model</a>
             </li>
+            <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#results">results</a>
+            </li>
 			      <li class="nav-item" style="font-size: 110%">
               <a class="nav-link js-scroll-trigger" href="#experiments">experiments</a>
+            </li>
+            <li class="nav-item" style="font-size: 110%">
+              <a class="nav-link js-scroll-trigger" href="#metadata">metadata</a>
             </li>
 
           </ul>
@@ -97,72 +106,111 @@
         Some video-pose examples in GES-X dataset. Original video clips are shown on the left, and the corresponding pose sequences are shown on the right.
       </p>
 	   <div class="col-md-12" style="text-align:left">
-       <table>
-          <tr>
-            <td style="width:3%"></td>
-            <td style="width:50%">
-              <iframe width="614" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <iframe width="614" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-
-          </tr>
-          <tr>
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;;margin-bottom: 30px; margin-top: 10px">
-                <font color="#4682B4">
-                  <b> The information of the audible segments:</b><br>
-                </font>                
-              </div>                      
-            </td>
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;margin-bottom: 30px; margin-top: 10px">
-                <font color="#4682B4">
-                  <b> The information of the audible segments:</b><br>
-                </font> 
+      <div class="container">
+        <!-- Carousel -->
+        <div class="container">
+          <!-- Carousel -->
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/1w3NXBXdY5c_0000007.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/1w3NXBXdY5c_0000007_prediction_silent.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td style="width:3%"></td>
-            <td style="width:50%">
-              <iframe width="614" height="207" src="./videos/-3f9zdKh7Oc.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <iframe width="614" height="207" src="./videos/2LTe9T2zwEM.mp4" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </td>
-
-          </tr>
-          <tr>
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;margin-bottom: 30px; margin-top: 10px">
-                <font color="#4682B4">
-                  <b> The information of the audible segments:</b><br>
-				  (1) Female singing:</br>
-                </font>                
-              </div>                      
-            </td>
-            <td style="width:1%"></td>
-            <td style="width: 50%">
-              <div style="text-align:left; overflow-x:auto ;overflow-y: auto;margin-bottom: 30px; margin-top: 10px">
-                <font color="#4682B4">
-                  <b> The information of the audible segments:</b><br>
-                </font> 
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/3VTsIju1dLI_0000051.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/3VTsIju1dLI_0000051_prediction_silent.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
               </div>
-            </td>
-          </tr>
-
-        </table>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/3VTsIju1dLI_0000077.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/3VTsIju1dLI_0000077_prediction_silent.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/5foou7mIA0w_0000027.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/5foou7mIA0w_0000027_prediction_silent.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/mYS2CcIdW1M_0000013.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                  <div class="col-md-6">
+                    <video controls class="d-block w-100">
+                      <source src="./videos/Ges_X_v1/mYS2CcIdW1M_0000013_prediction_silent.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>  
   </br>
   </div>
+</div>
 </div>
 
 
@@ -176,7 +224,7 @@
 	<h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px"> Overview of GES-X Dataset:</h5>
 	    <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem;">
-        <img src="./images/dataset_table.jpg" style="width: 100%" class="img-responsive"/> 
+        <img src="./images/dataset_table.jpg" style="width: 90%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left; margin-left:15px"> 
 		Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
@@ -223,7 +271,7 @@
       </div>
     </div>
 
-  <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px">Task Introduction:</h5>
+  <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px">Task Introduction</h5>
     <div class="row text-center">
       <p class="text-muted" style="text-align:left; margin-left:15px"> 
         In our work, we focus on the task of vivid and diverse co-speech 3D gesture generation from in-the-wild human voices.<br> Details about our task are shown in the figure below:
@@ -235,10 +283,10 @@
 
 
 </br>
-	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">CoCoGesture Framework:</h5>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">CoCoGesture Framework</h5>
 	    <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem; margin-top:20px; ">
-        <img src="./images/pipeline.svg" style="width: 100%" class="img-responsive"/> 
+        <img src="./images/pipeline.png" style="width: 100%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left; margin-left:15px"> 
         Along with GES-X, we proposed <b>CoCoGesture</b>, a novel framework enabling vivid and diverse
@@ -248,7 +296,7 @@
     </div>
 	
 	</br>
-	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Mixture-of-Gesture-Experts (MoGE):</h5>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Mixture-of-Gesture-Experts (MoGE)</h5>
 	<div class="row justify-content-md-center text-center">
     <div class="col-md centered" style="padding:1rem; margin-top:20px; ">
       <img src="./images/MoGE.svg" style="width: 60%" class="img-responsive"/> 
@@ -265,7 +313,111 @@
     
 
 </section>
-
+<!-- Results -->
+<section id="results">
+  <div class="container">
+  <!-- Carousel -->
+  <div class="container">
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/1207_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/13_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/2172_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/2240_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/27_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/30_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/305_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/3265_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/34_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="col-md-6">
+              <video controls class="d-block w-100">
+                <source src="./videos/CoCoGesture_sample_v1/50_prediction_withAudio.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>  
+</section>
 
 <!-- Experiments -->
  <section id="experiments">
@@ -273,159 +425,71 @@
  
     <div class="row">
       <div class="col-md-12 text-center">
-        <h2 class="section-heading text-uppercase">Strong Baselines for Benchmarking</h2>
-        <h3 class="section-subheading text-muted">Different Tasks Adopted to LU-AVS, A Strong Baseline for LU-AVS, Experimental Results and Challenge Analysis</h3>
+        <h2 class="section-heading text-uppercase" style="color: rgb(90, 90, 90); margin-top: 30px">Experiments</h2>
+        <h3 class="section-subheading" style="color: rgb(171, 171, 171)">Extensive experiments and comprehensive results demonstrate that our proposed CoCoGesture outperforms the state-of-the-art methods on the zero-shot speech-to-gesture generation.</h3>
       </div>
     </div>
 	
-	<div class="row">
-      <div class="col-md-12">
-        <p class="text-muted" style="text-align:left">
-		To show the necessity and fully explore the challenges of LU-AVS, we investigate the performance of existing <b>audio-visual segmentation (AVS)</b>, 
-		<b>audio-visual localization (AVL)</b>, 
-		<b>audio-visual event localization (AVE)</b>, and <b>spatio-temporal video grounding (STVG)</b> methods on our LU-AVS dataset. 
-		Based on the analysis of the above methods, we introduce a <b>simple yet effective framework</b> to provide a base reference for long video audible object grounding in the future.
-		</p>
-        <div class="col-md centered" style="padding:0.2rem; text-align:center; margin-bottom:8px">
-        <img src="./images/task.png" style="width: 90%;" class="img-responsive"/> 
-        </div> 
+
+    <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100); margin-top: 20px">Methods Performance Comparison</h5>
+    <div class="row text-center">
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+        Comparison with the state-of-the-art counterparts on BEAT2 and TalkSHOW datasets.        
+      </p>
+    <div style="padding:1rem; ">
+      <img src="./images/data_metrics.png" style="width: 80%" class="img-responsive"/> 
+    </div>
+    <p class="text-muted" style="text-align:left; margin-left:15px"> 
+    ↑ means the higher the better. <br>
+        ↓ indicates the lower the better. <br> 
+        “-” denotes that the method cannot be applied to the TalkSHOW dataset due to the lack of text transcripts. <br> 
+        The term “zero-shot” implies that the dataset contains unseen human voices.
+    </p>
+  </div>
+
+
+</br>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Experiments on Model Scale and Pre-training</h5>
+	    <div class="row text-center">
+      <div style="padding:1rem; margin-top:20px; ">
+        <img src="./images/exp_scale.png" style="width: 80%" class="img-responsive"/> 
       </div>
+      <p class="text-muted" style="text-align:left; margin-left:15px"> 
+        Ablation study on model scale and pre-training setting. <br>
+        ‡ denotes without pre-training stage.
+      </p>
     </div>
-     <br/>
-    <div class="row">
-      <div class="col-md-12">
-        <p class="text-muted" style="text-align:left">
-        <p class="text-muted" style="text-align:left">
-          <b>More details are in the <a href="#">[Paper]</a> and <a href="#">[Supplementary]</a></b>.<br/>  
-        </p> 
-      </div>
+	
+	</br>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Experiments on Mixture-of-Gesture-Experts (MoGE)</h5>
+	<div class="row text-center">
+    <div style="padding:1rem; margin-top:20px; ">
+      <img src="./images/exp_moge.png" style="width: 45%" class="img-responsive"/> 
     </div>
-    
-    <h5 class="section-subheading" style="text-align:left; color: rgb(100, 100, 100)"> Comparison with the state-of-the-art counterparts:</h5>
-    <div class="row justify-content-md-center text-center">
-      <div class="col-md centered" style="padding:1rem;">
-        <img src="./images/data_metrics.png" style="width: 100%" class="img-responsive"/> 
-      </div>
-      <p class="text-muted" style="text-align:left">
-        Comparison with the state-of-the-art counterparts on BEAT2 and TalkSHOW datasets. ↑ means the higher the better, and ↓ indicates the lower the better. “-” denotes that the method cannot be applied to the TalkSHOW dataset due to the lack of
-        text transcripts. The term “zero-shot’‘ implies that the dataset contains unseen human voices.
-    </div>
+    <p class="text-muted" style="text-align:left; margin-left:15px"> 
+      Ablation study of MoGE block on BEAT2 dataset.
+  </div>
+	  </div> 
 
-   <div class="row">
-		<div class="col-md-12">
-			<h5 class="subheading">Task Definition:</h5>
-			<br/>
-			<h6 class="subheading">Audio-Visual Segmentation Methods (AVS):</h6>
-			<p class="text-muted" style="text-align:left">
-			<b>The goal of the AVS task is to segment audible objects in an image based on a given audio-visual pair.</b>
-			Existing methods are designed based oncdatasets with the fixed input format of 10 frames corresponding to 10s audio. 
-			To adapt these methods for untrimmed videos, we modify the input to one second of audio and five uniformly sampled frames from the segment, allowing audio-visual interactions within the per-second segment.
-		</p>
-		</div>
-		
-		<div class="col-md-12">
-			<h6 class="subheading">Audio-Visual Localization Methods (AVL):</h6>
-			<p class="text-muted" style="text-align:left">
-			<b>The AVL task also focuses on locating audible objects in the spatial dimension.</b>
-			However, AVL presents sounding regions by heatmaps.
-			For comparison, in the test stage, we convert the heatmaps into bounding boxes as other works. Thanks to our bounding-box annotations, we can evaluate AVL on our LU-AVS dataset in a unified manner.
-			Similar to the modification for AVS methods, we slice the videos into 1-second segments to fit the AVL methods.
-		</div>
-		
-		<div class="col-md-12">
-			<h6 class="subheading">Audio-Visual Event Localization Methods (AVE):</h6>
-			<p class="text-muted" style="text-align:left">
-			<b>AVE task aims at determining the audio-visual temporal segments when the target object is both audible and visible at the same time. </b>
-			This task does not focus on segmenting audible objects on the spatial dimension, they cannot be applied to segmenting objects in images.
-			These methods are also developed based on the videos with fixed durations.
-		</div>
-		
-		<div class="col-md-12">
-			<h6 class="subheading">Spatio-temporal Video Grounding Methods (STVG):</h6>
-			<p class="text-muted" style="text-align:left">
-			<b>Given a query sentence, STVG methods are required to track the target object in the video both at the spatial (bounding boxes) and temporal dimensions (start and end time positions). </b>
-			Unlike the AVS task that may require segmenting multi-sounding objects in a video, the STVG methods only need to find and track one target object for each text-video pair.
-			To explore the performance of STVG methods on LU-AVS, we modify these text-guided methods to adapt to our task.
-		</div>
-		
-		<div class="col-md-12">
-			<h6 class="subheading">A Strong LU-AVS Baseline:</h6>
-			<div class="col-md centered" style="padding:0.2rem; text-align:center; margin-bottom:8px">
-			<img src="./images/pipeline.png" style="width:70%;" class="img-responsive"/> 
-			</div> 
-			<p class="text-muted" style="text-align:left">
-			<b>The overview architecture of a strong baseline. </b>It first learns visual and audio features separately and then establishes visual and audio associations. 
-			It enables us to dissect the impacts of visual and audio branches explicitly.
-			</p>
-			</br>
-			<p class="text-muted" style="text-align:left">
-			Different from previous AVS datasets, the LU-AVS dataset introduces unique challenges of detecting and segmenting audible objects in long videos.
-			In untrimmed videos, the target objects may emit or stop sound at a random position in a video, and the sounding durations of objects are various 
-			in the dataset. To achieve the spatial and temporal localization of audible objects, 
-			we introduce a simple framework to provide a base reference for long video audible object grounding in the future.
-			</p>
-</div>
-    </div>
+</section>
 
-    <br/>
-    <div class="row">
-      <div class="col-md-12">
-        <h4 class="subheading">Benchmarking Results and Analysis</h4>
-        <p class="text-muted" style="text-align:left">
-          <b>Benchmarking results on the LU-AVS dataset. </b> For all the evaluation metrics, higher values indicate better performance.
-		  Notably, in AVL methods, the spatial localization results are presented by heatmaps. 
-		  For comparison, we convert heatmaps to bounding boxes as exsiting works.
-		  Additionally, AVE methods focus on temporal localization. 
-		  Here, m_tIoU represents the segmentation accuracy within the ground-truth temporal range, 
-		  and m_vIoU indicates the segmentation accuracy over the temporal union between the predicted and ground-truth durations.
-		  Besides, we replace the text branch in the STVG methods with an audio branch for spatial-temporal audible object grounding.
-        </p>
-
-        <div class="col-md centered" style="padding:0.6rem; text-align:center">
-        <img src="./images/exp_results.jpg" style="width: 90%;" class="img-responsive"/> 
-        </div>
-      </div>
-    </div>
-
-    <br/>
-
-    
-    <div class="row">
-      <div class="col-md-12">
-       <h5 class="subheading">Challenges Imposed by LU-AVS Dataset</h5>                    
-        <p class="text-muted">        
-		Based on the above experimental results, we summarize the dataset challenges and adaptability of existing methods as follows: </br></br>
-        (1) <b>For long videos in LU-AVS, the sounding duration and the start- and end-sounding time positions are uncertain. </b></br>
-		Therefore, both the spatial and temporal localization of audible objects are necessary for LU-AVS. 
-		Existing AVS methods developed based on the trimmed videos struggle to achieve temporal localization, showing limited adaptability in long videos. <br/> 
-        </p>
- 
-		<p class="text-muted">        
-        (2) <b> Unlike trimmed videos always feature audible objects, untrimmed videos contain a high proportion of silent segments.  </b></</br>
-		Hence, the existing AVL methods trained on LU-AVS tend to overlook the audible objects.
-		This suggests the requirement for greater emphasis on audio in model development on LU-AVS.<br/>        
-        </p>
-		
- 		<p class="text-muted">        
-        (3) <b>Similar to the STVG task, the exhaustive annotations in LU-AVS pose a high demand for achieving consistent spatial and temporal localization of audible objects, 
-		requiring methods to effectively joint model spatial, temporal, and audio-visual interactions.</b><br/>        
-        </p>
-		<br/>
-		</div>
-	</div>
-	</br></br>
-
-<section class="bg-transparent" id="downloads">
+<section class="bg-transparent" id="metadata">
   <div class="container">
     
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-12 text-center">
         <h2 class="section-heading text-uppercase">Download</h2>
         <h3 class="section-subheading text-muted">Dataset publicly available for research purposes</h3>
       </div>
+    </div> -->
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2 class="section-heading text-uppercase">Metadata</h2>
+        <h3 class="section-subheading text-muted">Dataset metadata format</h3>
+      </div>
     </div>
-
-
+<!-- 
     <div class="row">
       <div class="col-md-12"> 
         
@@ -442,63 +506,35 @@
             </ul>
         </p>
 
-        <p> <b>Annotations</b> (train, val and test set): Available for download at <a href="#">GitHub  (Anonymous Now):</a></p>
-		<p> The format of a JSON file is shown in below:</p>
+        <p> <b>Annotations</b> (train, val and test set): Available for download at <a href="#">GitHub  (Anonymous Now):</a></p> -->
+		
+        <p> The format of a metadata JSON file is shown in below:</p>
        <pre class="hidden-sm hidden-md hidden-lg">
-<em class="comment">Please view the JSON format in larger screen</em>
+<em class="comment">(Please view the JSON format in larger screen.)</em>
 </pre>
 
 <pre class="hidden-xs">
-{
-    "version": "VERSION 1.0",
-	{
-		"video_id": "0YMv3RUxGQM",                       <em class="comment", style="color:#ff6600"># Video ID in LU-AVS</em>
-		"video_path": "./0YMv3RUxGQM.mp4",               <em class="comment", style="color:#ff6600"># Relative path name in this dataset</em>
-		"frame_count": 635,
-		"fps": 29.71, 
-		"width": 406, 
-		"height": 720, 
-		"subject_objects": [                            <em class="comment", style="color:#ff6600"># The ID of the audible segment in this video</em>
-			"0": {
-				"category_name": "engine_knocking",     <em class="comment", style="color:#ff6600"># The category name of an audible segment</em>
-				"start_frame": 212,
-				"end_frame": 632,
-				"mask_dir": "./0YMv3RUxGQM__engine_knocking__ST212__ET632", <em class="comment", style="color:#ff6600"># The directory with annotated masks of the video</em>
-				"trajectory_bbox_path": "./0YMv3RUxGQM.json"       <em class="comment", style="color:#ff6600"># Relative annotation recording path of a video</em>
-			}, 
-			...
-		], 
-	}
-	...
-}
-</pre>
 
-<em class="comment">The annotated json file of audible segments in a video (0YMv3RUxGQM.json).</em>
-
-<pre class="hidden-xs">
- 
-{
-	"0": {                                          <em class="comment", style="color:#ff6600"># The ID of the audible segment in this video</em>       
-		"212"{                                  <em class="comment", style="color:#ff6600"># The frame ID of the audible segment</em>
-			"bbox": [
-				161,                            <em class="comment", style="color:#ff6600"># Left</em>
-				34,	                        <em class="comment", style="color:#ff6600"># Top</em>
-				1028,                           <em class="comment", style="color:#ff6600"># Right</em>
-				685                             <em class="comment", style="color:#ff6600"># Bottom</em>
-			]
-			category_name: "engine_knocking",    <em class="comment", style="color:#ff6600"># The trajectory ID to which the bounding box belongs</em>
-			mask_path: "0/000212.png,           <em class="comment", style="color:#ff6600"># The specific mask path of the frame</em>
-			generated: 0,                       <em class="comment", style="color:#ff6600"># 1 - the bounding box is automatically generated by a tracker</em>
-						           <em class="comment", style="color:#ff6600"># 0 - the bounding box is manually labeled</em>
-		}, 
-		...
-	},
-	...
+{'basic':       <em class="comment", style="color:#ff6600"># Each item in metadata list is a dict of a clip extracted from a longer video</em>
+    {'video_id': 'J-LQxBbQPTY',                 <em class="comment", style="color:#ff6600"># Video ID in GES-X</em>
+		'video_path': 'TED_Talk_Videos_key/J-LQxBbQPTY.mp4',                       <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
+		'video_duration': 792.52,               <em class="comment", style="color:#ff6600"># Duration of the video</em>
+		'video_resolution': [360, 640],
+		'video_fps': 25.0, 
+		'clip_id': 'J-LQxBbQPTY_0000000',           <em class="comment", style="color:#ff6600"># Clip ID</em>
+		'clip_path': 'J-LQxBbQPTY_0000000.mp4',          <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
+		'clip_duration': 0.96,            <em class="comment", style="color:#ff6600"># Duration of the clip itself/em>
+		'clip_start_end_idx': [0, 24],     <em class="comment", style="color:#ff6600"># Start frame_id and end frame_id</em>
+		'clip_start_end_time': ['00:00:00.000', '00:00:00.960']     <em class="comment", style="color:#ff6600"># Start timestamp and end timestamp</em>
+    }, 
+  {
+      ...
+  }
 }
 </pre>
         
         <br/>
-        <h4 class="section-subheading">Publication(s)</h4>
+        <!-- <h4 class="section-subheading">Publication(s)</h4>
         <p>
           If you find our work useful in your research, please cite our paper.
         </p>
@@ -509,27 +545,27 @@
           author={anonymous},
           year={2024},
         }</code>
-        </pre>
+        </pre> -->
 
 
-        <br/>
+        <!-- <br/>
         <h4 class="section-subheading">Disclaimer </h4>
-        <p> The released LU-AVS dataset is curated, which perhaps owns potential correlation between instrument and geographical area. This issue warrants further research and consideration.
-        </p>
+        <p> The released GES-X dataset is curated, which perhaps owns potential correlation between instrument and geographical area. This issue warrants further research and consideration.
+        </p> -->
 
       </div>
     </div>
 
-
+<!-- 
     <br/>
     <div class="row">
       <div class="col-md-12">
         <h4 class="section-subheading">Copyright <img alt="Creative Commons License" style="border-width:1px;float:left;margin-right:15px;margin-bottom:0px;" src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png"/></h4>
         <p>
-          All datasets and benchmarks on this page are copyright by us and published under the <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International</a> License. This means that  you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes.
+          All datasets and frameworks on this page are copyright by us and published under the <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International</a> License. This means that  you must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use. You may not use the material for commercial purposes.
         </p>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -627,6 +663,10 @@
     <script src="./jquery/jquery.easing.min.js"></script>
     <!-- Custom scripts for this template -->
     <script src="./jquery/agency.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
   </body>
 </html>

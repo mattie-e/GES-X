@@ -104,6 +104,17 @@ section h3.section-subheading2 {
   text-align: right;
 }
 
+.carousel-item {
+  display: flex;
+  justify-content: space-between;
+}
+.carousel-item > div {
+  flex: 1;
+}
+.carousel-item video {
+  width: 100%;
+  height: auto;
+}
 
 img::selection {
   background: transparent;
