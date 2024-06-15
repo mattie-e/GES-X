@@ -42,28 +42,6 @@
         .carousel-control-next {
             right: 20px;
         }
-
-        .carousel-control-prev-icon, .carousel-control-next-icon {
-            display: none; /* Hide the default icons */
-        }
-
-        .carousel-control-prev::after, .carousel-control-next::after {
-            content: "";
-            display: block;
-            width: 0; 
-            height: 0; 
-            border-style: solid;
-        }
-
-        .carousel-control-prev::after {
-            border-width: 10px 18px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        .carousel-control-next::after {
-            border-width: 10px 0 10px 18px;
-            border-color: transparent transparent transparent white;
-        }
     </style>
     
   </head>
@@ -357,7 +335,8 @@
 </div>
 <div class="col-md-12" style="text-align:left">
   <div class="container">
-    <p style="text-align: left; margin-left: 15px; margin-bottom: 20px; color: rgb(171, 171, 171)">
+    <h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(100, 100, 100)">Demo Video</h5>
+    <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
       If it takes too long to load the videos below, please view the videos <a href="https://www.udrop.com/LLE6/ges_demo.mp4">here.</a>
     </p>
     <div class="row">
@@ -365,8 +344,13 @@
         <source src="./videos/ges_demo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+    </div>
     <!-- Carousel -->
-    <!-- <div id="carouselExampleIndicators1" class="carousel slide">
+    <h5 class="section-subheading" style="text-align:left; margin-top:50px; color: rgb(100, 100, 100)">Gesture Predictions</h5>
+    <p style="text-align: left; margin-bottom: 20px; color: rgb(171, 171, 171)">
+      If it takes too long to load the videos below, please view the videos <a href="https://www.udrop.com/folder/f8943da2f174d686d4b50d8afc86a2a1/cocogesture">here.</a>
+    </p>
+    <div id="carouselExampleIndicators1" class="carousel slide">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
@@ -464,7 +448,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div> -->
+    </div>
   </div>
 </div>
   </div>  
